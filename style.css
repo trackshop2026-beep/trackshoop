@@ -1,0 +1,289 @@
+/* --- RESET E CONFIGURAÇÕES GERAIS --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth; /* Faz o menu deslizar suavemente */
+}
+
+body {
+    background-color: #000000; /* Fundo Preto Total */
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+}
+
+/* --- CABEÇALHO --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: rgba(10, 10, 10, 0.95);
+    border-bottom: 1px solid #222;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #00f2ff; /* Cor destaque na logo */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav a {
+    color: #bbb;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #00f2ff;
+}
+
+/* Barra de Pesquisa */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-bar {
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: 1px solid #333;
+    background: #111;
+    color: #fff;
+    width: 180px;
+    font-size: 0.8rem;
+}
+
+.search-box i {
+    position: absolute;
+    right: 10px;
+    color: #555;
+}
+
+/* --- BANNER --- */
+.banner {
+    height: 450px;
+    background: linear-gradient(rgba(0,0,0,0.7), #000), url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=1470') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.banner h1 {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+}
+
+.btn-banner {
+    background: #00f2ff;
+    color: #000;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-banner:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 242, 255, 0.5);
+}
+
+/* --- GRID DE PRODUTOS --- */
+.container-produtos {
+    padding: 60px 5%;
+}
+
+.title-section {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.grid-produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+/* --- CARDS DOS PRODUTOS --- */
+.card {
+    background: #0a0a0a;
+    border-radius: 15px;
+    border: 1px solid #1a1a1a;
+    overflow: hidden;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.product-img {
+    height: 200px;
+    background: #151515;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #333;
+    font-size: 1.2rem;
+}
+
+.info {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.info h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.description {
+    color: #888;
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+    min-height: 45px;
+}
+
+.price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 20px;
+    display: block;
+}
+
+/* --- BOTÕES DOS CARDS --- */
+.btn-insta {
+    text-decoration: none;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    border: 1px solid #fff;
+    color: #fff;
+    transition: 0.3s;
+}
+
+/* --- CORES E BRILHOS POR CATEGORIA --- */
+.cyan { border-top: 5px solid #00f2ff; box-shadow: 0 5px 15px rgba(0, 242, 255, 0.1); }
+.blue { border-top: 5px solid #0070ff; box-shadow: 0 5px 15px rgba(0, 112, 255, 0.1); }
+.purple { border-top: 5px solid #bc13fe; box-shadow: 0 5px 15px rgba(188, 19, 254, 0.1); }
+.red { border-top: 5px solid #ff004c; box-shadow: 0 5px 15px rgba(255, 0, 76, 0.1); }
+.green { border-top: 5px solid #00ff88; box-shadow: 0 5px 15px rgba(0, 255, 136, 0.1); }
+.gold { border-top: 5px solid #ffcc00; box-shadow: 0 5px 15px rgba(255, 204, 0, 0.1); }
+.silver { border-top: 5px solid #c0c0c0; box-shadow: 0 5px 15px rgba(192, 192, 192, 0.1); }
+.emerald { border-top: 5px solid #50c878; box-shadow: 0 5px 15px rgba(80, 200, 120, 0.1); }
+.rose { border-top: 5px solid #ff66b2; box-shadow: 0 5px 15px rgba(255, 102, 178, 0.1); }
+.violet { border-top: 5px solid #8f00ff; box-shadow: 0 5px 15px rgba(143, 0, 255, 0.1); }
+.orange { border-top: 5px solid #ff8c00; box-shadow: 0 5px 15px rgba(255, 140, 0, 0.1); }
+.dark-gray { border-top: 5px solid #444; }
+.white-neon { border-top: 5px solid #fff; box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1); }
+
+/* Hover dos botões específicos */
+.cyan .btn-insta:hover { background: #00f2ff; color: #000; border-color: #00f2ff; }
+.gold .btn-insta:hover { background: #ffcc00; color: #000; border-color: #ffcc00; }
+.orange .btn-insta:hover { background: #ff8c00; color: #000; border-color: #ff8c00; }
+.purple .btn-insta:hover { background: #bc13fe; color: #fff; border-color: #bc13fe; }
+
+/* --- RODAPÉ --- */
+footer {
+    padding: 50px 5%;
+    background: #050505;
+    text-align: center;
+    border-top: 1px solid #111;
+}
+
+.social-links {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    color: #00f2ff;
+}
+
+.cnpj {
+    color: #444;
+    font-size: 0.7rem;
+    margin-top: 15px;
+}
+
+/* --- BOTÃO WHATSAPP FLUTUANTE --- */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    z-index: 2000;
+    transition: 0.3s;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    background-color: #128c7e;
+}
+
+.whatsapp-float i {
+    font-size: 20px;
+}
+
+/* Responsividade para Celular */
+@media (max-width: 768px) {
+    .banner h1 { font-size: 2.2rem; }
+    header { flex-direction: column; gap: 15px; }
+    .search-bar { width: 100%; }
+    .whatsapp-float span { display: none; }
+    .whatsapp-float { padding: 15px; border-radius: 50%; }
+}
