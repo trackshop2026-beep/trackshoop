@@ -11,23 +11,17 @@
 
     <header>
         <div class="logo">TRACK<span>SHOP</span></div>
-        
         <nav>
             <ul>
                 <li><a href="#home">Início</a></li>
                 <li><a href="#tecnologia">Tecnologia</a></li>
                 <li><a href="#casa">Casa</a></li>
-                <li><a href="#acessorios">Acessórios</a></li>
             </ul>
         </nav>
-
         <div class="header-right">
-            <div class="search-box">
-                <input type="text" placeholder="Pesquisar..." class="search-bar">
-                <i class="fas fa-search"></i>
-            </div>
-            <div class="cart-icon">
+            <div class="cart-icon" onclick="toggleCarrinho()">
                 <i class="fas fa-shopping-cart"></i>
+                <span id="cart-count" class="badge">0</span>
             </div>
         </div>
     </header>
@@ -36,7 +30,7 @@
         <div class="banner-content">
             <h1>TRACK SHOP</h1>
             <p>Sua performance elevada ao próximo nível. Tecnologia e estilo em um só lugar.</p>
-            <button class="btn-banner">Explorar Agora</button>
+            <button class="btn-banner" onclick="window.location.href='#tecnologia'">Explorar Agora</button>
         </div>
     </section>
 
@@ -48,9 +42,9 @@
                     <div class="product-img">📱 CAPINHAS</div>
                     <div class="info">
                         <h3>Capinhas Premium</h3>
-                        <p class="description">Mais que estilo: é a armadura do seu smartphone contra quedas e riscos diários.</p>
-                        <span class="price">A partir de R$ 39,90</span>
-                        <a href="https://instagram.com/trackshop" target="_blank" class="btn-insta">Ver no Instagram</a>
+                        <p class="description">Proteção contra quedas e riscos diários.</p>
+                        <span class="price">R$ 39,90</span>
+                        <button class="btn-insta" onclick="adicionarAoCarrinho('Capinha Premium', 39.90)">Adicionar ao Carrinho</button>
                     </div>
                 </div>
 
@@ -58,9 +52,9 @@
                     <div class="product-img">🛡️ PELÍCULAS</div>
                     <div class="info">
                         <h3>Películas 9D Glass</h3>
-                        <p class="description">Proteção invisível e ultra resistente. Evite gastos caros com troca de telas.</p>
+                        <p class="description">Proteção invisível e ultra resistente.</p>
                         <span class="price">R$ 25,00</span>
-                        <a href="https://instagram.com/trackshop" target="_blank" class="btn-insta">Tirar Dúvida</a>
+                        <button class="btn-insta" onclick="adicionarAoCarrinho('Película 9D', 25.00)">Adicionar ao Carrinho</button>
                     </div>
                 </div>
 
@@ -68,9 +62,9 @@
                     <div class="product-img">🎧 FONES</div>
                     <div class="info">
                         <h3>Fones Bluetooth</h3>
-                        <p class="description">Liberdade sonora e imersão total. Perfeitos para seu treino ou foco no trabalho.</p>
+                        <p class="description">Liberdade sonora e imersão total.</p>
                         <span class="price">R$ 89,90</span>
-                        <a href="https://instagram.com/trackshop" target="_blank" class="btn-insta">Chamar no Direct</a>
+                        <button class="btn-insta" onclick="adicionarAoCarrinho('Fone Bluetooth', 89.90)">Adicionar ao Carrinho</button>
                     </div>
                 </div>
 
@@ -78,9 +72,9 @@
                     <div class="product-img">📽️ PROJETORES</div>
                     <div class="info">
                         <h3>Cinema em Casa 4K</h3>
-                        <p class="description">Transforme qualquer parede em uma tela gigante. Alta definição para filmes.</p>
-                        <span class="price">R$ 1.200,00</span>
-                        <a href="https://instagram.com/trackshop" target="_blank" class="btn-insta">Consultar</a>
+                        <p class="description">Transforme sua parede em uma tela gigante.</p>
+                        <span class="price">R$ 1200,00</span>
+                        <button class="btn-insta" onclick="adicionarAoCarrinho('Projetor 4K', 1200.00)">Adicionar ao Carrinho</button>
                     </div>
                 </div>
 
@@ -88,9 +82,9 @@
                     <div class="product-img">⌚ RELÓGIOS</div>
                     <div class="info">
                         <h3>Digital Tech Watch</h3>
-                        <p class="description">Pontualidade com estilo. Funções inteligentes para facilitar sua rotina.</p>
+                        <p class="description">Pontualidade com estilo inteligente.</p>
                         <span class="price">R$ 150,00</span>
-                        <a href="https://instagram.com/trackshop" target="_blank" class="btn-insta">Ver Cores</a>
+                        <button class="btn-insta" onclick="adicionarAoCarrinho('Relógio Tech', 150.00)">Adicionar ao Carrinho</button>
                     </div>
                 </div>
             </div>
@@ -103,9 +97,9 @@
                     <div class="product-img">🏠 ADESIVOS</div>
                     <div class="info">
                         <h3>Papéis de Parede</h3>
-                        <p class="description">Renove seu ambiente sem reformas. Praticidade para transformar sua casa.</p>
-                        <span class="price">Consulte m²</span>
-                        <a href="https://instagram.com/trackshop" target="_blank" class="btn-insta">Ver Estampas</a>
+                        <p class="description">Renove seu ambiente sem reformas.</p>
+                        <span class="price">R$ 49,90</span>
+                        <button class="btn-insta" onclick="adicionarAoCarrinho('Papel de Parede', 49.90)">Adicionar ao Carrinho</button>
                     </div>
                 </div>
 
@@ -113,9 +107,9 @@
                     <div class="product-img">📦 ORGANIZAÇÃO</div>
                     <div class="info">
                         <h3>Organizadores Smart</h3>
-                        <p class="description">A paz de um ambiente arrumado. Ganhe espaço em cada canto do seu lar.</p>
-                        <span class="price">A partir de R$ 45,00</span>
-                        <a href="https://instagram.com/trackshop" target="_blank" class="btn-insta">Quero Organizar</a>
+                        <p class="description">A paz de um ambiente arrumado.</p>
+                        <span class="price">R$ 45,00</span>
+                        <button class="btn-insta" onclick="adicionarAoCarrinho('Organizador Smart', 45.00)">Adicionar ao Carrinho</button>
                     </div>
                 </div>
 
@@ -123,106 +117,115 @@
                     <div class="product-img">🍳 COZINHA</div>
                     <div class="info">
                         <h3>Chef Tech Utensílios</h3>
-                        <p class="description">Facilite seu dia a dia com ferramentas que unem design e utilidade.</p>
-                        <span class="price">Ver Catálogo</span>
-                        <a href="https://instagram.com/trackshop" target="_blank" class="btn-insta">Chamar no Direct</a>
-                    </div>
-                </div>
-
-                <div class="card rose">
-                    <div class="product-img">🌸 AROMAS</div>
-                    <div class="info">
-                        <h3>Essências Exclusivas</h3>
-                        <p class="description">Crie memórias através do olfato. Fragrâncias que tornam seu lar um refúgio.</p>
-                        <span class="price">R$ 59,90</span>
-                        <a href="https://instagram.com/trackshop" target="_blank" class="btn-insta">Escolher Aroma</a>
-                    </div>
-                </div>
-
-                <div class="card violet">
-                    <div class="product-img">✨ DIFUSORES</div>
-                    <div class="info">
-                        <h3>Difusor Elétrico</h3>
-                        <p class="description">Tecnologia a serviço do bem-estar. Aromaterapia com design moderno.</p>
-                        <span class="price">R$ 189,00</span>
-                        <a href="https://instagram.com/trackshop" target="_blank" class="btn-insta">Tirar Dúvidas</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="container-produtos" id="acessorios">
-            <h2 class="title-section">Acessórios & Estilo</h2>
-            <div class="grid-produtos">
-                <div class="card silver">
-                    <div class="product-img">⌚ RELÓGIO LED</div>
-                    <div class="info">
-                        <h3>Relógio LED Moderno F91W</h3>
-                        <p class="description">Estilo Harajuku em aço. O retrô e o moderno para qualquer ocasião.</p>
-                        <span class="price">R$ 89,90</span>
-                        <a href="https://instagram.com/trackshop" target="_blank" class="btn-insta">Ver Detalhes</a>
-                    </div>
-                </div>
-
-                <div class="card dark-gray">
-                    <div class="product-img">🕶️ ÓCULOS GRAY</div>
-                    <div class="info">
-                        <h3>Óculos Behave New Gray</h3>
-                        <p class="description">Design unissex com lentes de alta qualidade. Elegância e proteção.</p>
-                        <span class="price">R$ 120,00</span>
-                        <a href="https://instagram.com/trackshop" target="_blank" class="btn-insta">Chamar no Direct</a>
-                    </div>
-                </div>
-
-                <div class="card orange">
-                    <div class="product-img">🕶️ RETRÔ UV</div>
-                    <div class="info">
-                        <h3>Óculos Quadrado Retrô</h3>
-                        <p class="description">Proteção UV total com estilo vintage. A armação que é tendência.</p>
-                        <span class="price">R$ 65,00</span>
-                        <a href="https://instagram.com/trackshop" target="_blank" class="btn-insta">Eu quero este</a>
-                    </div>
-                </div>
-
-                <div class="card white-neon">
-                    <div class="product-img">👟 TÊNIS CASUAL</div>
-                    <div class="info">
-                        <h3>Sapatênis Sola Alta</h3>
-                        <p class="description">Conforto e presença. Sola reta alta para um visual urbano.</p>
-                        <span class="price">R$ 199,00</span>
-                        <a href="https://instagram.com/trackshop" target="_blank" class="btn-insta">Ver Tamanhos</a>
-                    </div>
-                </div>
-
-                <div class="card gold">
-                    <div class="product-img">⛓️ CORRENTE 18K</div>
-                    <div class="info">
-                        <h3>Cordão Piastrini 18k</h3>
-                        <p class="description">Banhado a ouro com acabamento fino. O detalhe que faltava.</p>
-                        <span class="price">R$ 145,00</span>
-                        <a href="https://instagram.com/trackshop" target="_blank" class="btn-insta">Ver Qualidade</a>
+                        <p class="description">Design e utilidade para sua cozinha.</p>
+                        <span class="price">R$ 79,90</span>
+                        <button class="btn-insta" onclick="adicionarAoCarrinho('Chef Tech', 79.90)">Adicionar ao Carrinho</button>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="social-links">
-            <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
-            <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
-            <a href="https://wa.me/5518997695352"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+    <div id="carrinho-lateral" class="carrinho-sidebar">
+        <div class="carrinho-header">
+            <h3>Finalizar Pedido</h3>
+            <button onclick="toggleCarrinho()" class="close-btn">&times;</button>
         </div>
-        <p>Loja 100% Virtual - Atendimento Online para todo Brasil</p>
-        <p class="cnpj">CNPJ: Em breve</p>
-    </footer>
+        
+        <div class="carrinho-body-scroll">
+            <div id="itens-carrinho">
+                <p style="text-align: center; color: #555; padding: 20px;">Seu carrinho está vazio.</p>
+            </div>
 
-    <a href="https://wa.me/5518997695352?text=Olá! Estava no site da Track Shop e gostaria de tirar uma dúvida." 
-       class="whatsapp-float" 
-       target="_blank">
-        <i class="fab fa-whatsapp"></i>
-        <span>Dúvidas? Chame aqui!</span>
-    </a>
+            <div class="checkout-form">
+                <p class="form-label">DADOS DE ENTREGA</p>
+                <div class="cep-group">
+                    <input type="text" id="cep-cliente" placeholder="CEP" class="input-checkout">
+                    <button onclick="calcularFrete()" class="btn-calc-frete">OK</button>
+                </div>
+                <input type="text" id="nome-cliente" placeholder="Nome Completo" class="input-checkout">
+                <input type="text" id="cpf-cliente" placeholder="CPF" class="input-checkout">
+                <input type="email" id="email-cliente" placeholder="E-mail" class="input-checkout">
+                <input type="text" id="tel-cliente" placeholder="WhatsApp" class="input-checkout">
+                <textarea id="endereco-cliente" placeholder="Endereço, Nº e Bairro" class="input-checkout"></textarea>
+                
+                <div id="info-frete" class="info-frete-box">
+                    Frete: R$ <span id="valor-frete-display">0,00</span>
+                </div>
+            </div>
+        </div>
 
+        <div class="carrinho-footer">
+            <div class="total">
+                <span>Total:</span>
+                <span id="valor-total">R$ 0,00</span>
+            </div>
+            <button onclick="enviarPedidoCompleto()" class="btn-finalizar">Finalizar no WhatsApp</button>
+        </div>
+    </div>
+
+    <script>
+        let carrinho = [];
+        let frete = 0;
+
+        function toggleCarrinho() { document.getElementById('carrinho-lateral').classList.toggle('active'); }
+
+        function adicionarAoCarrinho(nome, preco) {
+            carrinho.push({ nome, preco });
+            atualizarCarrinho();
+            document.getElementById('carrinho-lateral').classList.add('active');
+        }
+
+        function atualizarCarrinho() {
+            const container = document.getElementById('itens-carrinho');
+            container.innerHTML = '';
+            let subtotal = 0;
+
+            if (carrinho.length === 0) {
+                container.innerHTML = '<p style="text-align: center; color: #555; padding: 20px;">Seu carrinho está vazio.</p>';
+            } else {
+                carrinho.forEach((item, index) => {
+                    subtotal += item.preco;
+                    container.innerHTML += `
+                        <div class="item-cart">
+                            <div class="item-info">
+                                <span>${item.nome}</span>
+                                <strong>R$ ${item.preco.toFixed(2)}</strong>
+                            </div>
+                            <button onclick="removerItem(${index})"><i class="fas fa-trash"></i></button>
+                        </div>`;
+                });
+            }
+            document.getElementById('valor-total').innerText = `R$ ${(subtotal + frete).toFixed(2)}`;
+            document.getElementById('cart-count').innerText = carrinho.length;
+        }
+
+        function removerItem(index) {
+            carrinho.splice(index, 1);
+            atualizarCarrinho();
+        }
+
+        function calcularFrete() {
+            const cep = document.getElementById('cep-cliente').value;
+            if(cep.length < 8) return alert("Digite um CEP válido");
+            frete = 15.00; 
+            document.getElementById('valor-frete-display').innerText = frete.toFixed(2);
+            document.getElementById('info-frete').style.display = 'block';
+            atualizarCarrinho();
+        }
+
+        function enviarPedidoCompleto() {
+            if (carrinho.length === 0) return alert("Seu carrinho está vazio!");
+            const nome = document.getElementById('nome-cliente').value;
+            const endereco = document.getElementById('endereco-cliente').value;
+            if (!nome || !endereco) return alert("Preencha os dados obrigatórios!");
+            
+            let texto = `🚀 *NOVO PEDIDO - TRACK SHOP*%0A%0A*Cliente:* ${nome}%0A*Endereço:* ${endereco}%0A%0A*Itens:*%0A`;
+            carrinho.forEach(i => texto += `- ${i.nome} (R$ ${i.preco.toFixed(2)})%0A`);
+            texto += `%0A*TOTAL: ${document.getElementById('valor-total').innerText}*`;
+            
+            window.open(`https://wa.me/5518997043033?text=${texto}`, '_blank');
+        }
+    </script>
 </body>
 </html>
